@@ -22,6 +22,7 @@ import LinkingConfiguration from './LinkingConfiguration';
 import {DrawerNavigator} from './drawer.navigator'
 import HomeScreen from '../screens/HomeScreen';
 import UserScreen from '../screens/UserScreen';
+import { HomeTab } from '../screens/HomeTab';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -64,8 +65,11 @@ export const BottomTabNavigator = () => {
     <BottomTab.Navigator
       initialRouteName="TabOne"
       screenOptions={{
+        header: () => null,
         tabBarActiveTintColor: Colors[colorScheme].tint,
-      }}>
+      }}
+      tabBar={props => <HomeTab {...props} />}
+      >
       <BottomTab.Screen
         name="HomeScreen"
         component={HomeScreen}

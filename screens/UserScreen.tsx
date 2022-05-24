@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Text, StyleSheet, View} from 'react-native'
+import {Text, StyleSheet, View, SafeAreaView} from 'react-native'
 
 const styles = StyleSheet.create({
     container: {
@@ -27,16 +27,21 @@ const styles = StyleSheet.create({
 
 export default () => {
     return (
-        <View style={styles.container}>
-            <View style={styles.circle}></View>
-            {
-                new Array(10).fill(0).map((v,index) => {
-                    if(index %2===0) {
+        <SafeAreaView>
+            <View style={styles.container}>
+                <View style={styles.circle}></View>
+                {
+                    new Array(4).fill(0).map((v,index) => {
                         return (<View style={styles.rect1} />) 
-                    }
-                    return <View style={styles.rect2} />
-                })
-            }
-        </View>
+                    })
+                }
+                        {
+                    new Array(8).fill(0).map((v,index) => {
+                        return (<View style={styles.rect2} />) 
+                    })
+                }
+            </View>
+        </SafeAreaView>
+        
     )
 }

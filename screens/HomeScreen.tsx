@@ -2,6 +2,7 @@ import * as React from 'react'
 import {Text, ScrollView, View, Pressable, TouchableOpacity, StyleSheet } from 'react-native'
 import ContentLoader, { Facebook, Instagram } from 'react-content-loader'
 import Webservice from './webservice'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 // const HomeItem = () => {
 //     return <Facebook />
@@ -57,7 +58,8 @@ const HomeItem = ()=>{
 
 export default () => {
     return (
-       <ScrollView>
+        <SafeAreaView>
+            <ScrollView>
            {/* <HomeItem /> */}
            {/* <ContentLoader /> */}
            <View>
@@ -67,5 +69,7 @@ export default () => {
            </View>
           
        </ScrollView>
+        </SafeAreaView>
+       
     )
 }
