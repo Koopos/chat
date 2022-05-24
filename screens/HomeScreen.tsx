@@ -1,9 +1,10 @@
 import * as React from 'react'
-import {Text, ScrollView, View} from 'react-native'
+import {Text, ScrollView, View, Pressable, TouchableOpacity } from 'react-native'
 import { Facebook} from 'react-content-loader'
+import Webservice from './webservice'
 
 const HomeItem = () => {
-    return <Text>111</Text>
+    return <TouchableOpacity onPress={() => Webservice.openBrowser('http://www.baidu.com')}><Text>111</Text></TouchableOpacity>
 }
 //   
 // )
