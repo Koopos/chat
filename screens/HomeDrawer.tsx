@@ -7,10 +7,9 @@ const DrawerItem = ({item, navigation}) => {
     return (
         <TouchableOpacity onPress={() => {navigation.toggleDrawer()}}>
         <View>
-        <Text style={{textAlign: "center", lineHeight: 30}}>{item.name}</Text>
+        <Text style={{textAlign: "center", lineHeight: 40, fontSize: 16}}>{item.name}</Text>
     </View>
         </TouchableOpacity>
-   
     )
 }
 
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
         height: 60, 
         marginVertical:4,
         borderRadius: 30,
-        backgroundColor: "grey",
+        backgroundColor: "#ccc",
         marginLeft: 20
     }
 })
