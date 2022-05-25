@@ -20,6 +20,7 @@ import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../typ
 import LinkingConfiguration from './LinkingConfiguration';
 
 import {DrawerNavigator} from './drawer.navigator'
+import modalNavigator from './modal.navigator';
 import HomeScreen from '../screens/HomeScreen';
 import UserScreen from '../screens/UserScreen';
 import { HomeTab } from '../screens/HomeTab';
@@ -80,6 +81,11 @@ export const BottomTabNavigator = () => {
         component={UserScreen}
         options={{headerShown: false, tabBarIcon: ({color}) => <TabBarIcon name="user" color={color} />}}
       />
+      <BottomTab.Screen name="ModalScreen"
+        component={modalNavigator}
+      >
+
+      </BottomTab.Screen>
     </BottomTab.Navigator>
   );
 }

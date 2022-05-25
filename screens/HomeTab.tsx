@@ -4,7 +4,7 @@ import {View, TouchableOpacity, Text, SafeAreaView, StyleSheet} from "react-nati
 const styles = StyleSheet.create({
     item: {
         height: 40,
-        width: 120,
+        width: 80,
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
@@ -30,6 +30,10 @@ export const HomeTab = ({navigation}) => {
         }, {
             label: "user",
             screen: "UserScreen"
+        },
+        {
+            label: "modal",
+            screen: "ModalScreen"
         }
     ]
     return (
